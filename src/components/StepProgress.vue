@@ -4,6 +4,8 @@
   const props = defineProps({
     data: Object,
   })
+
+  console.log(props.data);
 </script>
 
 
