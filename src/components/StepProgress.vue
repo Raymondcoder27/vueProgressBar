@@ -1,5 +1,5 @@
 <script setup>
-  import { defineProps, ref } from 'vue';
+  import { defineProps, ref, computed } from 'vue';
 
   const props = defineProps({
     data: Object,
@@ -8,6 +8,12 @@
   props.data.currentStep--;
 
   const data = ref(props.data);
+
+  const cssStyle = computed(() => {
+    return {
+      
+    }
+  })
 </script>
 
 
