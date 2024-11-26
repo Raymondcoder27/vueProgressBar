@@ -11,7 +11,5 @@
 </script>
 
 <template>
-  <div>
     <StepProgress :data="dataSteps" />
-  </div>
 </template>
