@@ -5,7 +5,7 @@
     </i>
     <div class="details">
       <h3>
-        <slot name="heading"></slot>
+       Step Progress
       </h3>
       <slot></slot>
     </div>
