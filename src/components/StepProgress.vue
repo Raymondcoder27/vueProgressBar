@@ -12,6 +12,7 @@ const data = ref(props.data);
 const cssStyle = computed(() => {
   return {
     "--active-color": data.value.activeColor,
+    "--passive-color": data.value.inactiveColor,
   };
 });
 </script>
