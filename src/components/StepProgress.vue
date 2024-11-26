@@ -1,19 +1,19 @@
 <script setup>
-  import { defineProps, ref, computed } from 'vue';
+import { defineProps, ref, computed } from "vue";
 
-  const props = defineProps({
-    data: Object,
-  })
+const props = defineProps({
+  data: Object,
+});
 
-  props.data.currentStep--;
+props.data.currentStep--;
 
-  const data = ref(props.data);
+const data = ref(props.data);
 
-  const cssStyle = computed(() => {
-    return {
-      '--active-color': data.value.activeColor,
-    }
-  })
+const cssStyle = computed(() => {
+  return {
+    "--active-color": data.value.activeColor,
+  };
+});
 </script>
 
 
