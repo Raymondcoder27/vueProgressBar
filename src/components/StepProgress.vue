@@ -4,9 +4,9 @@
       <slot name="icon"></slot>
     </i>
     <div class="details">
-      <h3 class="bg-green-400 rounded-lg text-7xl">
+      <p class="bg-green-200 rounded-lg text-lg font-bold">
        Step Progress
-      </h3>
+      </p>
       <slot></slot>
     </div>
   </div>
