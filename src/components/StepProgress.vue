@@ -11,7 +11,7 @@
 
   const cssStyle = computed(() => {
     return {
-      
+      '--active-color': data.value.activeColor,
     }
   })
 </script>
