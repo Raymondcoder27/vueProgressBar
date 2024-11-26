@@ -1,11 +1,13 @@
 <script setup>
-  import { defineProps } from 'vue';
+  import { defineProps, ref } from 'vue';
 
   const props = defineProps({
     data: Object,
   })
 
-  console.log(props.data);
+  props.data.currentStep--;
+
+  const data = ref(props.data);
 </script>
 
 
