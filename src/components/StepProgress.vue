@@ -14,10 +14,7 @@
 <template>
   <div class="steps-container">
     <ul class="steps-list">
-      <li class="step">
-        <div class="step-content" :class="data.currentStep === 0 ? data.activeColor : data.inactiveColor">
-          {{ data.steps[0] }}
-        </div>
+      <li class="step" v-for="(step, index) in data.steps" :key="index">
       </li>
     </ul>
   </div>
