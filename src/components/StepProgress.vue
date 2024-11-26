@@ -12,15 +12,13 @@
 
 
 <template>
-  <div class="item">
-    <i>
-      <slot name="icon"></slot>
-    </i>
-    <div class="details">
-      <p class="bg-gray-200 rounded-lg text-lg font-bold text-black-400 text-center">
-       Step Progress
-      </p>
-      <slot></slot>
-    </div>
+  <div class="steps-container">
+    <ul class="steps-list">
+      <li class="step">
+        <div class="step-content" :class="data.currentStep === 0 ? data.activeColor : data.inactiveColor">
+          {{ data.steps[0] }}
+        </div>
+      </li>
+    </ul>
   </div>
 </template>
