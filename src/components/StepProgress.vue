@@ -8,7 +8,10 @@ const props = defineProps({
 
 // props.data.currentStep--;
 
-const data = ref(props.data);
+// const data = ref(props.data);
+
+const data = ref({ ...props.data, currentStep: props.data.currentStep || 0 }); // Ensure 0-based index
+
 
 // const data = ref({ ...props.data });
 // data.value.currentStep--;
@@ -39,7 +42,7 @@ const nextStep = () => {
 // };
 
 const previousStep = () => {
-  if (data.value.currentStep > 1) {
+  if (data.value.currentStep > 0) {
     data.value.currentStep--;
   }
 };
