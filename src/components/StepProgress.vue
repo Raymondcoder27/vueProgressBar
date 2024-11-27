@@ -5,9 +5,14 @@ const props = defineProps({
   data: Object,
 });
 
+// props.data.currentStep--;
+
+// const data = ref(props.data);
+const data = ref({ ...props.data });
+
 props.data.currentStep--;
 
-const data = ref(props.data);
+
 
 const cssStyle = computed(() => {
   return {
@@ -21,7 +26,7 @@ const cssStyle = computed(() => {
 <template>
   <div class="steps-container" :style="cssStyle">
     <ul class="steps-list">
-      <li class="step" v-for="(step, index) in data.steps" :key="index" :class="(index == data.currentStep )? '--stepActive' : ''">
+      <li class="step" v-for="(step, index) in data.value.steps" :key="index" :class="(index == data.currentStep )? '--stepActive' : ''">
         <div class="step-bubble"></div>
         <div class="step-line">
           <div class="line-fill"></div>
