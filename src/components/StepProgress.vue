@@ -64,9 +64,14 @@ const cssStyle = computed(() => {
     width: 100%;
     height: 5px;
     background-color: var(--passive-color);
+    position: absolute;
     top: 50%;
     left: 0;
     transform: translate(-50%);
     z-index: -10;
+  }
+
+  .step:last-child .step-line{
+    display: none;
   }
 </style>
