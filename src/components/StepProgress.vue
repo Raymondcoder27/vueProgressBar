@@ -21,7 +21,7 @@ const cssStyle = computed(() => {
 <template>
   <div class="steps-container" :style="cssStyle">
     <ul class="steps-list">
-      <li class="step" v-for="(step, index) in data.steps" :key="index">
+      <li class="step" v-for="(step, index) in data.steps" :key="index" :class="">
         <div class="step-bubble"></div>
         <div class="step-line">
           <div class="line-fill"></div>
