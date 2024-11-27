@@ -114,6 +114,7 @@ defineExpose({ nextStep, previousStep });
 .step-label{
   font-weight: 500;
   font-size: 18px;
+  position: absolute;
 }
 
 .step:last-child .step-line {
