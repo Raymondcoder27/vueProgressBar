@@ -55,9 +55,9 @@ const cssStyle = computed(() => {
   .step{
     display: flex;
     align-items: center;
-    flex-grow: 1;
     max-width: 100%;
-    position: absolute;
+    position: relative;
+    flex-grow: 1;
     height: 60px;
   }
 
