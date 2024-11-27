@@ -126,6 +126,7 @@ defineExpose({ nextStep, previousStep });
   font-weight: bold;
   justify-content: center;
   align-content: center;
+  display: none;
 }
 
 .step-active .step-count {
