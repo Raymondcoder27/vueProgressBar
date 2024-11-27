@@ -55,7 +55,8 @@ defineExpose({ nextStep, previousStep });
         :key="index"
         :class="
           (index == data.currentStep ? 'step-active' : '',
-          index < data.currentStep ? 'step-done' : '')" >
+          index < data.currentStep ? 'step-done' : '')" 
+          >
         <div class="step-bubble">
           <div class="step-count">{{ index + 1 }}</div>
           <!-- <IconDone /> -->
