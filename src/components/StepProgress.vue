@@ -129,8 +129,11 @@ defineExpose({ nextStep, previousStep });
   display: none;
 }
 
-.icon-done{
-  fill: white;
+.icon-done-icon{
+  fill: gray;
+  width: 30px;
+  height: 30px;
+  display: none;
 }
 
 .step-active .step-count {
