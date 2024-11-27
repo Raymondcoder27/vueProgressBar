@@ -36,7 +36,7 @@ const cssStyle = computed(() => {
     </ul>
   </div>
 </template>
-
+<!-- 
 <style scoped>
   .steps-container{
     width: 100%;
@@ -84,4 +84,48 @@ const cssStyle = computed(() => {
   .step:last-child .step-line{
     display: none;
   }
+</style> -->
+
+
+
+<style scoped>
+.steps-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.steps-list {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  height: 60px;
+  position: relative;
+}
+
+.step-bubble {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: var(--passive-color);
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+}
+
+.step-line {
+  flex-grow: 1;
+  height: 5px;
+  background-color: var(--passive-color);
+  position: relative;
+}
+
+.step:last-child .step-line {
+  display: none;
+}
 </style>
