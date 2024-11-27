@@ -1,5 +1,5 @@
 <script setup>
-import { defineProps, ref, computed } from "vue";
+import { defineProps, ref, computed, defineExpose } from "vue";
 
 const props = defineProps({
   data: Object,
@@ -32,6 +32,8 @@ const previousStep = () => {
     data.value.currentStep--;
   }
 };
+
+defineExpose({ nextStep, previousStep });
 </script>
 
 

@@ -3,7 +3,7 @@
 
   const dataSteps = {
     steps: ['Step 1', 'Step 2', 'Step 3', 'Step 4'],
-    currentStep: 2,
+    currentStep: 1,
     activeColor: '#3b82f6',
     passiveColor: '#d1d5db',
   }
