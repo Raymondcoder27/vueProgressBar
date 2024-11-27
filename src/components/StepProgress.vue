@@ -1,5 +1,6 @@
 <script setup>
 import { defineProps, ref, computed, defineExpose } from "vue";
+import StepDoneIcon from "./icons/IconDone.vue";
 
 const props = defineProps({
   data: Object,
