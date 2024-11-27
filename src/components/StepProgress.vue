@@ -132,4 +132,10 @@ const cssStyle = computed(() => {
 .step:last-child .step-line {
   display: none;
 }
+
+.step-active .step-bubble {
+  background-color: var(--active-color);
+  width: 40px;
+  height: 40px;
+}
 </style>
