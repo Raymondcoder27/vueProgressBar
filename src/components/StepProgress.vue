@@ -128,4 +128,9 @@ defineExpose({ nextStep, previousStep });
   font-size: 1.2rem;
   font-weight: bold;
 }
+
+.step-active .step-count {
+  font-size: 1.5rem;
+  display: block;
+}
 </style>
