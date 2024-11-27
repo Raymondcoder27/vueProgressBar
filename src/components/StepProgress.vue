@@ -166,6 +166,6 @@ defineExpose({ nextStep, previousStep });
 .step-done .step-label {
   font-weight: 600;
   color: var(--active-color);
-
+  opacity: 1;
 }
 </style>
