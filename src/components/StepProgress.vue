@@ -25,6 +25,13 @@ const nextStep = () => {
     data.value.currentStep++;
   }
 };
+
+
+const previousStep = () => {
+  if (data.value.currentStep > 0) {
+    data.value.currentStep--;
+  }
+};
 </script>
 
 
