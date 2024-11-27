@@ -6,7 +6,7 @@ const props = defineProps({
   data: Object,
 });
 
-props.data.currentStep--;
+// props.data.currentStep--;
 
 const data = ref(props.data);
 
