@@ -32,7 +32,6 @@ const nextStep = () => {
   }
 };
 
-
 // const previousStep = () => {
 //   if (data.value.currentStep > 0) {
 //     data.value.currentStep--;
@@ -44,7 +43,6 @@ const previousStep = () => {
     data.value.currentStep--;
   }
 };
-
 
 defineExpose({ nextStep, previousStep });
 </script>
@@ -63,15 +61,25 @@ defineExpose({ nextStep, previousStep });
           index == 0 && index == data.currentStep ? 'step-done-in-advance' : '')
         "
       > -->
-      <li
+      <!-- <li
         class="step"
         v-for="(step, index) in data.steps"
         :key="index"
         :class="
           (index == data.currentStep ? 'step-active' : '',
-          index < data.currentStep ? 'step-done' : '',
-          index == 0 && index == data.currentStep ? 'step-done-in-advance' : '')" 
-          >
+          index < data.currentStep ? 'step-done' : ''
+         )" 
+          > -->
+      <li
+        class="step"
+        v-for="(step, index) in data.steps"
+        :key="index"
+        :class="{
+          'step-active': index === data.currentStep,
+          'step-done': index < data.currentStep,
+          'step-done-in-advance': index === 0 && data.currentStep > 0,
+        }"
+      >
         <div class="step-bubble">
           <div class="step-count">{{ index + 1 }}</div>
           <!-- <IconDone /> -->
@@ -164,7 +172,7 @@ defineExpose({ nextStep, previousStep });
   fill: gray;
   width: 30px;
   height: 30px;
-  display: none;  
+  display: none;
 }
 
 .step-done .step-done-icon {
@@ -181,7 +189,7 @@ defineExpose({ nextStep, previousStep });
 }
 
 .step-done-in-advance .line-fill {
-  /* background-color: var(--active-color); */
+  background-color: var(--active-color);
   width: 50%;
 }
 
