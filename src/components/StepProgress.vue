@@ -66,7 +66,7 @@ defineExpose({ nextStep, previousStep });
     </div>
   </template>
 
-
+<style scoped>
 .step {
     display: flex;
     align-items: center;
@@ -89,4 +89,4 @@ defineExpose({ nextStep, previousStep });
   .step-active .line-fill {
     width: 50%;
   }
-  
+  </style>
