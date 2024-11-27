@@ -18,6 +18,13 @@ const cssStyle = computed(() => {
     "--passive-color": data.value.passiveColor,
   };
 });
+
+
+const nextStep = () => {
+  if (data.value.currentStep < data.value.steps.length - 1) {
+    data.value.currentStep++;
+  }
+};
 </script>
 
 
@@ -101,7 +108,7 @@ const cssStyle = computed(() => {
   height: 60px;
 }
 
-.step-active .line-fill {
+.step-done .line-fill {
   width: 100%;
 }
 </style>
