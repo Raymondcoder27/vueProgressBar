@@ -39,8 +39,9 @@ const cssStyle = computed(() => {
 
   .steps-list{
     display: flex;
-    justify-content: space-between;
     list-style: none;
-    padding: 0;
+  }
+  .step{
+    display: flex;
   }
 </style>
