@@ -142,14 +142,14 @@ defineExpose({ nextStep, previousStep });
   font-weight: bold;
   justify-content: center;
   align-content: center;
-  display: none;
+  /* display: none; */
 }
 
 .icon-done-icon {
   fill: gray;
   width: 30px;
   height: 30px;
-  display: none;
+  display: none;  
 }
 
 .step-done .step-done-icon {
