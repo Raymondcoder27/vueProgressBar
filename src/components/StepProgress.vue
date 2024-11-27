@@ -54,6 +54,7 @@ defineExpose({ nextStep, previousStep });
 
         <div class="step-bubble">
           <div class="step-count">{{ index + 1 }}</div>
+          <StepDoneIcon v-if="index < data.currentStep" />
         </div>
         <div class="step-line">
           <div class="line-fill"></div>
