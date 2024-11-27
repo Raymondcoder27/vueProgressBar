@@ -1,5 +1,8 @@
 <script setup>
   import StepProgress from './components/StepProgress.vue';
+  import { ref } from 'vue';
+
+  const stepProgress = ref()
 
   const dataSteps = {
     steps: ['Step 1', 'Step 2', 'Step 3', 'Step 4'],
@@ -11,5 +14,10 @@
 </script>
 
 <template>
-    <StepProgress :data="dataSteps" />
+    <StepProgress :data="dataSteps" ref="stepProgress" />
+    <div class="">
+      <button @click="stepProgress.previousStep">Previous Step</button>
+      <button @click="stepProgress.nextStep">Next Step</button>
+
+      </div>
 </template>
