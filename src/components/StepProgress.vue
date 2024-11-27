@@ -53,6 +53,9 @@ defineExpose({ nextStep, previousStep });
           <div class="step-count">{{ index + 1 }}</div>
           <IconDone />
         </div>
+        <div class="step-label">
+          {{ step }}
+        </div>
         <div class="step-line">
           <div class="line-fill"></div>
         </div>
@@ -67,6 +70,7 @@ defineExpose({ nextStep, previousStep });
   width: 100%;
   margin: 0 auto;
   margin-left: 50px;
+  margin-bottom: 30px;
 }
 
 .steps-list {
@@ -105,6 +109,11 @@ defineExpose({ nextStep, previousStep });
   height: 5px;
   background-color: var(--passive-color);
   position: relative;
+}
+
+.step-label{
+  font-weight: 500;
+  font-size: 18px;
 }
 
 .step:last-child .step-line {
@@ -151,4 +160,6 @@ defineExpose({ nextStep, previousStep });
   /* background-color: var(--active-color); */
   width: 50%;
 }
+
+
 </style>
