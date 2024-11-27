@@ -8,7 +8,12 @@ const props = defineProps({
 // props.data.currentStep--;
 
 // const data = ref(props.data);
-const data = ref({ ...props.data });
+// const data = ref({ ...props.data });
+const data = ref({
+  ...props.data,
+  steps: props.data.steps || [], // Ensure steps is defined
+});
+
 
 // props.data.currentStep--;
 
