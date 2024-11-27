@@ -14,8 +14,8 @@ const dataSteps = {
 
 <template>
   <StepProgress :data="dataSteps" ref="stepProgress" />
-  <div class="">
-    <button @click="stepProgress.previousStep">Previous Step</button>
-    <button @click="stepProgress.nextStep">Next Step</button>
+  <div class="text-center justify-evenly">
+    <button @click="stepProgress.previousStep" class="bg-blue-500 text-white rounded-md p-1 mr-2">Previous Step</button>
+    <button @click="stepProgress.nextStep" class="bg-blue-500 text-white rounded-md p-1">Next Step</button>
   </div>
 </template>
