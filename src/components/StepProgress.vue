@@ -72,6 +72,13 @@ const cssStyle = computed(() => {
   justify-content: center;
 }
 
+.line-fill{
+  width: 0;
+  background-color: var(--active-color);
+  height: 5px;
+  transition: all 0.3s ease;
+}
+
 .step-line {
   flex-grow: 1;
   height: 5px;
