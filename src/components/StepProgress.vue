@@ -49,6 +49,7 @@ const cssStyle = computed(() => {
 .steps-container {
   width: 100%;
   margin: 0 auto;
+  margin-left: 50px;
 }
 
 .steps-list {
@@ -98,5 +99,9 @@ const cssStyle = computed(() => {
   background-color: var(--active-color);
   width: 60px;
   height: 60px;
+}
+
+.step-active .line-fill {
+  width: 100%;
 }
 </style>
