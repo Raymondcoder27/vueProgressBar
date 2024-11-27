@@ -36,4 +36,11 @@ const cssStyle = computed(() => {
     width: 95%;
     margin: 0 auto;
   }
+
+  .steps-list{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+  }
 </style>
