@@ -33,7 +33,7 @@ const cssStyle = computed(() => {
 
 <style scoped>
   .steps-container{
-    width: 95%;
+    width: 100%;
     margin: 0 auto;
   }
 
@@ -66,6 +66,7 @@ const cssStyle = computed(() => {
     background-color: var(--passive-color);
     top: 50%;
     left: 0;
-    transform: translate(-50%)
+    transform: translate(-50%);
+    z-index: -10;
   }
 </style>
