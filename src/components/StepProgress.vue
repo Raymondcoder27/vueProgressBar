@@ -44,9 +44,10 @@ defineExpose({ nextStep, previousStep });
         v-for="(step, index) in data.steps"
         :key="index"
         :class="
-          (index == data.currentStep) ? 'step-active' : '',
-          (index < data.currentStep) ? 'step-done' : '',
-        (index == 0 && index == data.currentStep) ? 'step-done-in-advance' : '')"
+          (index == data.currentStep ? 'step-active' : '',
+          index < data.currentStep ? 'step-done' : '',
+          index == 0 && index == data.currentStep ? 'step-done-in-advance' : '')
+        "
       >
         <!-- <li v-for="(step, index) in data.value.steps" :key="index" :class="{ '--stepActive': index === data.value.currentStep }"> -->
 
