@@ -20,13 +20,11 @@ const cssStyle = computed(() => {
   };
 });
 
-
 const nextStep = () => {
   if (data.value.currentStep < data.value.steps.length - 1) {
     data.value.currentStep++;
   }
 };
-
 
 const previousStep = () => {
   if (data.value.currentStep > 0) {
@@ -46,9 +44,9 @@ defineExpose({ nextStep, previousStep });
         v-for="(step, index) in data.steps"
         :key="index"
         :class="
-          (index == data.currentStep ? 'step-active' : '',
-          index < data.currentStep ? 'step-done' : '')
-        "
+          (index == data.currentStep) ? 'step-active' : '',
+          (index < data.currentStep) ? 'step-done' : '',
+        (index == 0 && index == data.currentStep) ? 'step-done-in-advance' : '')"
       >
         <!-- <li v-for="(step, index) in data.value.steps" :key="index" :class="{ '--stepActive': index === data.value.currentStep }"> -->
 
@@ -121,10 +119,6 @@ defineExpose({ nextStep, previousStep });
   height: 60px;
 }
 
-.step-done .line-fill {
-  width: 100%;
-}
-
 .step-count {
   color: white;
   font-size: 1.2rem;
@@ -136,5 +130,14 @@ defineExpose({ nextStep, previousStep });
 .step-active .step-count {
   font-size: 1.5rem;
   display: block;
+}
+
+.step-done .line-fill {
+  width: 100%;
+}
+
+.step-done-in-advance .line-fill {
+  /* background-color: var(--active-color); */
+  width: 50%;
 }
 </style>
