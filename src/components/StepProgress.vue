@@ -49,8 +49,6 @@ defineExpose({ nextStep, previousStep });
           index == 0 && index == data.currentStep ? 'step-done-in-advance' : '')
         "
       >
-        <!-- <li v-for="(step, index) in data.value.steps" :key="index" :class="{ '--stepActive': index === data.value.currentStep }"> -->
-
         <div class="step-bubble">
           <div class="step-count">{{ index + 1 }}</div>
           <IconDone v-if="index < data.currentStep" />
@@ -134,6 +132,10 @@ defineExpose({ nextStep, previousStep });
   width: 30px;
   height: 30px;
   display: none;
+}
+
+.step-done .step-done-icon {
+  display: block;
 }
 
 .step-active .step-count {
