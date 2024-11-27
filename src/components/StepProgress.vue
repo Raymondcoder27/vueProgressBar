@@ -5,12 +5,12 @@ const props = defineProps({
   data: Object,
 });
 
-// props.data.currentStep--;
+props.data.currentStep--;
 
-// const data = ref(props.data);
+const data = ref(props.data);
 
-const data = ref({ ...props.data });
-data.value.currentStep--;
+// const data = ref({ ...props.data });
+// data.value.currentStep--;
 
 
 const cssStyle = computed(() => {
@@ -25,8 +25,8 @@ const cssStyle = computed(() => {
 <template>
   <div class="steps-container" :style="cssStyle">
     <ul class="steps-list">
-      <!-- <li class="step" v-for="(step, index) in data.steps" :key="index" :class="(index == data.currentStep )? '--stepActive' : ''"> -->
-        <li v-for="(step, index) in data.value.steps" :key="index" :class="{ '--stepActive': index === data.value.currentStep }">
+      <li class="step" v-for="(step, index) in data.steps" :key="index" :class="(index == data.currentStep )? '--stepActive' : ''">
+        <!-- <li v-for="(step, index) in data.value.steps" :key="index" :class="{ '--stepActive': index === data.value.currentStep }"> -->
 
         <div class="step-bubble"></div>
         <div class="step-line">
@@ -41,7 +41,6 @@ const cssStyle = computed(() => {
   .steps-container{
     width: 100%;
     margin: 0 auto;
-    margin-left: 500px;
   }
 
   .steps-list{
