@@ -39,7 +39,7 @@ defineExpose({ nextStep, previousStep });
 <template>
   <div class="steps-container" :style="cssStyle">
     <ul class="steps-list">
-      <li
+      <!-- <li
         class="step"
         v-for="(step, index) in data.steps"
         :key="index"
@@ -48,10 +48,17 @@ defineExpose({ nextStep, previousStep });
           index < data.currentStep ? 'step-done' : '',
           index == 0 && index == data.currentStep ? 'step-done-in-advance' : '')
         "
-      >
+      > -->
+      <li
+        class="step"
+        v-for="(step, index) in data.steps"
+        :key="index"
+        :class="
+          (index == data.currentStep ? 'step-active' : '',
+          index < data.currentStep ? 'step-done' : '')" >
         <div class="step-bubble">
           <div class="step-count">{{ index + 1 }}</div>
-          <IconDone />
+          <!-- <IconDone /> -->
         </div>
         <div class="step-label mt-20">
           {{ step }}
@@ -111,7 +118,7 @@ defineExpose({ nextStep, previousStep });
   position: relative;
 }
 
-.step-label{
+.step-label {
   font-weight: 500;
   font-size: 18px;
   position: absolute;
@@ -137,7 +144,7 @@ defineExpose({ nextStep, previousStep });
   display: none;
 }
 
-.icon-done-icon{
+.icon-done-icon {
   fill: gray;
   width: 30px;
   height: 30px;
