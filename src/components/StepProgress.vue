@@ -35,11 +35,16 @@ const cssStyle = computed(() => {
   .steps-container{
     width: 100%;
     margin: 0 auto;
+    margin-left: 500px;
   }
 
   .steps-list{
     display: flex;
     list-style: none;
+  }
+
+  .step:last-child{
+    max-width: 60px;
   }
   .step{
     display: flex;
