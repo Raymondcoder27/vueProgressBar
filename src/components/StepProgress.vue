@@ -20,17 +20,31 @@ const cssStyle = computed(() => {
   };
 });
 
+// const nextStep = () => {
+//   if (data.value.currentStep < data.value.steps.length - 1) {
+//     data.value.currentStep++;
+//   }
+// };
+
 const nextStep = () => {
-  if (data.value.currentStep < data.value.steps.length - 1) {
+  if (data.value.currentStep < data.value.steps.length) {
     data.value.currentStep++;
   }
 };
 
+
+// const previousStep = () => {
+//   if (data.value.currentStep > 0) {
+//     data.value.currentStep--;
+//   }
+// };
+
 const previousStep = () => {
-  if (data.value.currentStep > 0) {
+  if (data.value.currentStep > 1) {
     data.value.currentStep--;
   }
 };
+
 
 defineExpose({ nextStep, previousStep });
 </script>
