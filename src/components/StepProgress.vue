@@ -1,6 +1,6 @@
 <script setup>
 import { defineProps, ref, computed, defineExpose } from "vue";
-import StepDoneIcon from "./icons/IconDone.vue";
+import IconDone from "./icons/IconDone.vue";
 
 const props = defineProps({
   data: Object,
@@ -54,7 +54,7 @@ defineExpose({ nextStep, previousStep });
 
         <div class="step-bubble">
           <div class="step-count">{{ index + 1 }}</div>
-          <StepDoneIcon v-if="index < data.currentStep" />
+          <IconDone v-if="index < data.currentStep" />
         </div>
         <div class="step-line">
           <div class="line-fill"></div>
