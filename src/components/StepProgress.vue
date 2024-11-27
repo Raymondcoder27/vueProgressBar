@@ -10,7 +10,10 @@ const props = defineProps({
 // const data = ref(props.data);
 const data = ref({ ...props.data });
 
-props.data.currentStep--;
+// props.data.currentStep--;
+
+data.value.currentStep--; // Safer within the reactive state
+
 
 
 
