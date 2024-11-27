@@ -43,5 +43,18 @@ const cssStyle = computed(() => {
   }
   .step{
     display: flex;
+    align-items: center;
+    flex-grow: 1;
+    max-width: 100%;
+    position: absolute;
+    height: 60px;
+  }
+
+  .step-bubble{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--passive-color);
+    margin: 0 auto;
   }
 </style>
