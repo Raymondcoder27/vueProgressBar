@@ -19,7 +19,7 @@ const cssStyle = computed(() => {
 
 
 <template>
-  <div class="steps-container">
+  <div class="steps-container" :style="cssStyle">
     <ul class="steps-list">
       <li class="step" v-for="(step, index) in data.steps" :key="index">
         <div class="step-bubble"></div>
@@ -30,3 +30,10 @@ const cssStyle = computed(() => {
     </ul>
   </div>
 </template>
+
+<style scoped>
+  .steps-container{
+    width: 95%;
+    margin: 0 auto;
+  }
+</style>
