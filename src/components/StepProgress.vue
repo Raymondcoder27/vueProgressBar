@@ -28,8 +28,10 @@ const cssStyle = computed(() => {
         class="step"
         v-for="(step, index) in data.steps"
         :key="index"
-        :class="(index == data.currentStep) ? 'step-active' : '',
-         (index < data.currentStep) ? 'step-done' : ''"
+        :class="
+          (index == data.currentStep ? 'step-active' : '',
+          index < data.currentStep ? 'step-done' : '')
+        "
       >
         <!-- <li v-for="(step, index) in data.value.steps" :key="index" :class="{ '--stepActive': index === data.value.currentStep }"> -->
 
@@ -73,7 +75,7 @@ const cssStyle = computed(() => {
   justify-content: center;
 }
 
-.line-fill{
+.line-fill {
   width: 0;
   background-color: var(--active-color);
   height: 5px;
