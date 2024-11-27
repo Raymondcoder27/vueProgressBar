@@ -28,7 +28,7 @@ const cssStyle = computed(() => {
         class="step"
         v-for="(step, index) in data.steps"
         :key="index"
-        :class="(index == data.currentStep) ? '--stepActive' : ''"
+        :class="(index == data.currentStep) ? 'step-active' : ''"
       >
         <!-- <li v-for="(step, index) in data.value.steps" :key="index" :class="{ '--stepActive': index === data.value.currentStep }"> -->
 
