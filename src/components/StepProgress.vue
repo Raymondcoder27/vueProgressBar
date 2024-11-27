@@ -12,7 +12,6 @@ const data = ref(props.data);
 // const data = ref({ ...props.data });
 // data.value.currentStep--;
 
-
 const cssStyle = computed(() => {
   return {
     "--active-color": data.value.activeColor,
@@ -25,7 +24,12 @@ const cssStyle = computed(() => {
 <template>
   <div class="steps-container" :style="cssStyle">
     <ul class="steps-list">
-      <li class="step" v-for="(step, index) in data.steps" :key="index" :class="(index == data.currentStep )? '--stepActive' : ''">
+      <li
+        class="step"
+        v-for="(step, index) in data.steps"
+        :key="index"
+        :class="index == data.currentStep ? '--stepActive' : ''"
+      >
         <!-- <li v-for="(step, index) in data.value.steps" :key="index" :class="{ '--stepActive': index === data.value.currentStep }"> -->
 
         <div class="step-bubble"></div>
