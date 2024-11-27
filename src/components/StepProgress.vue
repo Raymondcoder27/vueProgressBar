@@ -28,7 +28,8 @@ const cssStyle = computed(() => {
         class="step"
         v-for="(step, index) in data.steps"
         :key="index"
-        :class="(index == data.currentStep) ? 'step-active' : ''"
+        :class="(index == data.currentStep) ? 'step-active' : '',
+         (index < data.currentStep) ? 'step-done' : ''"
       >
         <!-- <li v-for="(step, index) in data.value.steps" :key="index" :class="{ '--stepActive': index === data.value.currentStep }"> -->
 
@@ -90,7 +91,8 @@ const cssStyle = computed(() => {
   display: none;
 }
 
-.step-active .step-bubble {
+.step-active .step-bubble,
+.step-done .step-bubble {
   background-color: var(--active-color);
   width: 60px;
   height: 60px;
