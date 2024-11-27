@@ -51,7 +51,9 @@ defineExpose({ nextStep, previousStep });
       >
         <!-- <li v-for="(step, index) in data.value.steps" :key="index" :class="{ '--stepActive': index === data.value.currentStep }"> -->
 
-        <div class="step-bubble"></div>
+        <div class="step-bubble">
+          <div class="step-count">{{ index + 1 }}</div>
+        </div>
         <div class="step-line">
           <div class="line-fill"></div>
         </div>
@@ -119,5 +121,11 @@ defineExpose({ nextStep, previousStep });
 
 .step-done .line-fill {
   width: 100%;
+}
+
+.step-count {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 </style>
