@@ -40,56 +40,6 @@ const cssStyle = computed(() => {
     </ul>
   </div>
 </template>
-<!-- 
-<style scoped>
-  .steps-container{
-    width: 100%;
-    margin: 0 auto;
-  }
-
-  .steps-list{
-    display: flex;
-    list-style: none;
-  }
-
-  .step:last-child{
-    max-width: 60px;
-  }
-  .step{
-    display: flex;
-    align-items: center;
-    max-width: 100%;
-    position: relative;
-    flex-grow: 1;
-    height: 60px;
-  }
-
-  .step-bubble{
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    background-color: var(--passive-color);
-    transition:all 0.3s ease;
-     display: flex;
-    justify-content: center;
-  }
-
-  .step-line{
-    width: 100%;
-    height: 5px;
-    background-color: var(--passive-color);
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translate(-50%);
-    z-index: -10;
-  }
-
-  .step:last-child .step-line{
-    display: none;
-  }
-</style> -->
-
 
 
 <style scoped>
@@ -135,7 +85,7 @@ const cssStyle = computed(() => {
 
 .step-active .step-bubble {
   background-color: var(--active-color);
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
 }
 </style>
