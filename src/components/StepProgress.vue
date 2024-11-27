@@ -51,10 +51,9 @@ const cssStyle = computed(() => {
   }
 
   .step-bubble{
-    width: 20px;
-    height: 20px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     background-color: var(--passive-color);
-    margin: 0 auto;
   }
 </style>
